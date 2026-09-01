@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinder Joy || Surprise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="nav_top">
+        <img src="img/logo.png" alt="LOGO">
+        <div id="nav_links">
+            <a href="#">Home</a>
+            <a href="#">Discover</a>
+            <a href="#">Treats</a>
+            <a href="#">Toys</a>
+            <a href="#">Applaydu</a>
+        </div>
+        <button>Login</button>
+        <i class="ri-menu-line"></i>
+    </nav>
+
+<div id="main" data-scroll-container>
+    <img id="kinderEgg" src="./img/ipa.png" alt="">
+
+    <div id="page1">
+    <div class="kinder-bg"></div>
+</div>
+
+    <div id="page2">
+            <div id="page2_part1">
+                <h3>delicious surprise</h3>
+                <h1>Kinder Joy</h1>
+                <p>Experience the perfect harmony of milky sweet cream and cocoa cream, topped with two crispy wafer bites filled with cocoa cream. Plus, uncover a magical surprise toy in every egg! Fun, imaginative, and wildly delicious, this is joy crafted perfectly.
+                </p>
+                <button>Open Now!</button>
+            </div>
+            <div id="page2_part2">
+                <h3>MLK</h3>
+                <h5>Rich Milk Cream</h5>
+                <div id="box">
+                    <h2>100 <span>%</span></h2>
+                    <p>High-quality ingredients ensuring a creamy, smooth texture your kids will love.</p>
+                </div>
+                <h3>CCA</h3>
+                <h5>Cocoa Wafers</h5>
+                <div id="box">
+                    <h2>2 <span>Bites</span></h2>
+                    <p>Crunchy cocoa spheres that add the perfect satisfying crunch to every bite.</p>
+                </div>
+                <div id="page2_part2_text1">
+                <h3>TOY</h3>
+                <h5>Surprise Element</h5>
+                <div id="box">
+                    <h2>∞ <span>Fun</span></h2>
+                    <p>Endless imagination with a unique, interactive toy hidden in the other half.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page3">
+        <h1>Experience</h1>
+        <div id="page3_text">
+            <div id="page3_text_part1">
+                <a href="#">
+                    <img src="img/news.png" alt="">
+                </a>
+                <h5>Hear it from our master toy creators</h5>
+            </div>
+            <div id="page3_text_part2">
+                <h5>Discover the magic of two halves. One side holds a delicious sweet treat, while the other holds a world of imagination, learning, and play.</h5>
+                <h2>SWEETNESS</h2>
+                <p>A delightful explosion on the palate. Sweet milk cream elegantly paired with rich cocoa and a satisfying wafer crunch.</p>
+                <p>Every spoonful delivers a happy, comforting finish that leaves a smile on your face and gets you ready for playtime.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="page4">
+        <div id="page4_color1">
+            <img id="page4_color_image1" src="img/Green-LSS.png" alt="">
+            <div id="page4_color_image1_text">
+                <h4>milk-cream</h4>
+                <p>A bright, sweet blend delivering a deliciously smooth and milky base.</p>
+            </div>
+        </div>
+        <div id="page4_color2">
+            <img id="page4_color_image2" src="img/Green-LSS.png" alt="">
+            <div id="page4_color_image2_text">
+                <h4>cocoa-wafer</h4>
+                <p>Rich cocoa bites, perfectly baked to add a satisfying, crunchy dimension.</p>
+            </div>
+        </div>
+        <div id="page4_color3">
+            <img id="page4_color_image3" src="img/splat-black.png" alt="">
+            <div id="page4_color_image3_text">
+                <h4>magic-toy</h4>
+                <p>Creative, fun, and exceptionally engaging. A beautiful spark of imagination.</p>
+            </div>
+        </div>
+        <img src="./img/cup.png" alt="" id="page4_color_image4">
+    </div>
+
+    <div id="page5">
+    <h5>Always Ready</h5>
+    <h1>endless fun</h1>
+    <div id="page5_image_box">
+        
+        <div class="page5_extraimage flask-card" id="page5_flask" onclick="flipCard(this, 'Batman')">
+            <div class="flip-wrapper">
+                <div class="flip-front">
+                    <img id="image11" src="img/image1.png" alt="">
+                </div>
+                <div class="flip-back">
+                    <img id="toy11" src="img/toy1.png" alt="">
+                </div>
+            </div>
+            <h4>Batman <br> Edition</h4>
+        </div>
+        
+        <div id="page5_flask" class="flask-card" onclick="flipCard(this, 'Spiderman')">
+            <div class="flip-wrapper">
+                <div class="flip-front">
+                    <img id="image22" src="img/image2.png" alt="">
+                </div>
+                <div class="flip-back">
+                    <img id="toy22" src="img/toy2.png" alt="">
+                </div>
+            </div>
+            <h4>Spiderman <br> Edition</h4>
+        </div>
+        
+        <div id="page5_flask" class="flask-card" onclick="flipCard(this, 'Classical')">
+            <div class="flip-wrapper">
+                <div class="flip-front">
+                    <img id="image33" src="img/ipa.png" alt="">
+                </div>
+                <div class="flip-back">
+                    <img id="toy33" src="img/toy_classical.png" alt="">
+                </div>
+            </div>
+            <h4>Classical<br>  Edition</h4>
+        </div>
+        
+        <div id="page5_flask" class="flask-card" onclick="flipCard(this, 'Harry Potter')">
+            <div class="flip-wrapper">
+                <div class="flip-front">
+                    <img id="image44" src="img/image3.png" alt="">
+                </div>
+                <div class="flip-back">
+                    <img id="toy44" src="img/toy3.png" alt="">
+                </div>
+            </div>
+            <h4>Harry Potter<br>  Edition</h4>
+        </div>
+        
+        <div id="page5_flask" class="flask-card" onclick="flipCard(this, 'Mickey Mouse')">
+            <div class="flip-wrapper">
+                <div class="flip-front">
+                    <img id="image55" src="img/image4.png" alt="">
+                </div>
+                <div class="flip-back">
+                    <img id="toy55" src="img/toy4.png" alt="">
+                </div>
+            </div>
+            <h4>Mickey Mouse <br> Edition</h4>
+        </div>
+        
+    </div>
+</div>
+    <div id="page6">
+        <div id="page6_part1">
+            <img src="./img/page6.png" alt="">
+        </div>
+        <div id="page6_part2">
+            <h5>Applaydu</h5>
+            <h1>Bring Toys To Life.</h1>
+            <p>Explore creative ways to play with our free Applaydu app. Scan your toys and discover a world of educational mini-games, stories, and augmented reality adventures.</p>
+            <button>Play Now</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/b90a16c0c9.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

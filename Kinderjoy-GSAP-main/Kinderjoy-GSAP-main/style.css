@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth;
+    /* Updated background to a Kinder Joy themed orange & white gradient */
+    background: linear-gradient(135deg, #fcf9f1 0%, #F4E6C5 40%, #ffe0cc 100%);
+}
+::-webkit-scrollbar {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Nav Top Css */
+#nav_top {
+    width: 94.2vw;
+    height: 12vh;
+    padding: 0 4.5vw 0 4vw;
+    left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+#nav_top>img {
+    height: 50px;
+}
+
+/* Nav Links Centered */
+#nav_links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6vw;
+}
+#nav_links a {
+    text-decoration: none;
+    color: #2F3542;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+#nav_links a:hover {
+    color: #FF5E00; /* Kinder Orange hover */
+}
+
+#nav_top>button {
+    padding: 7px 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 24px;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #FF5E00; /* Kinder Orange */
+    border-style: none;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#nav_top>i {
+    font-size: 2.5vw;
+    display: none;
+}
+
+/* Kinder Egg Image (Formerly juiceBottle) */
+#kinderEgg {
+    position: absolute;
+    height: 70vh;
+    top: 3%;
+    left: 34.5%;
+    z-index: 990;
+    border-image: 0 0 2vmax black;
+}
+#kinderEggCopy {
+    display: none;
+}
+/* Page1 Css */
+#page1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page1 .kinder-bg {
+    width: 60vw;
+    /* You must set a height or aspect-ratio since there is no text to 'push' the height */
+    aspect-ratio: 16 / 9; 
+    
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-size: contain; /* Ensures the full image is visible without clipping */
+    background-repeat: no-repeat;
+    
+    /* Smoothing for high-res images */
+    -webkit-font-smoothing: antialiased;
+}
+/* Page 2 Css */
+#page2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.1vw 0 10vw;
+}
+
+#page2_part1 {
+    width: 25vw;
+    height: 79vh;
+}
+#page2_part1 h3 {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 12px;
+    font-size: 2vw;
+border: 22px;
+    color: #00A0E9; /* Kinder Light Blue */
+}
+#page2_part1 h1 {
+    width: 25vw;
+    height: 30vh;
+    font-size: 7vw;
+    line-height: 14vh;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    word-spacing: -1vmax;
+    background: url(img/texture.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #FF5E00; /* Kinder Orange */
+    -webkit-font-smoothing: antialiased;
+}
+#page2_part1>p {
+    font-family: 'Dosis', sans-serif;
+    color: #2F3542;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+#page2_part1>button {
+    padding: 10px 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 20px;
+    white-space: nowrap;
+    background-color: #00A0E9; /* Kinder Light Blue */
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+#page2_part2 {
+    width: 28vw; /* Slightly wider for better breathing room */
+    min-height: 50vh;
+    padding: 1.5vmax;
+    
+    /* Smoothness: Rounded corners and subtle glassmorphism */
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 94, 0, 0.1); 
+    
+    /* A layered shadow feels smoother than a glow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 
+                0 1px 8px rgba(255, 94, 0, 0.1);
+    
+    font-family: 'Dosis', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+#page2_part2:hover {
+    transform: translateY(-5px); /* Adds a tactile, smooth feel */
+}
+
+#page2_part2 h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    font-weight: 700;
+    color: #00A0E9; /* Kinder Blue */
+    letter-spacing: 0.5px;
+}
+
+#page2_part2 h5 {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+    font-weight: 500;
+    color: #747D8C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns price/text to the bottom for a cleaner baseline */
+    border-top: 2px solid #f1f2f6; /* Lighter separator */
+    padding-top: 0.5vh;
+    margin-top: 1vh;
+}
+
+#page2_part2 p {
+    font-size: 0.9rem;
+    width: 14vw;
+    color: #2F3542;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+#box h2 {
+    font-size: 48px;
+    font-family: 'Anton', sans-serif;
+    color: #FF5E00; /* Kinder Orange */
+    line-height: 1;
+}
+
+#box h2 span {
+    font-size: 24px;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+/* page 3 css */
+#page3 {
+    width: 100vw;
+    height: 110vh;
+    padding: 0 5vmax 0 10vmax;
+}
+
+#page3 h1 {
+    width: 85vw;
+    font-size: 18.3vw;
+    line-height: 18.5vw;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    background: url(img/texture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #FF5E00; 
+}
+#page3_text {
+    display: flex;
+    justify-content: space-between;
+}
+#page3_text_part1 a img {
+    width: 25vw;
+    margin-top: 3vh;
+    border-radius: 8px;
+}
+#page3_text_part1 h5 {
+    width: 23vw;
+    font-size: 1.8vw;
+    margin-top: 3vh;
+    line-height: 4vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #00A0E9;
+}
+
+#page3_text_part2 {
+    width: 30vw;
+    padding: 1vmax 2vmax;
+}
+#page3_text_part2 h5 {
+    width: 25vw;
+    font-size: 1vmax;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #2F3542;
+}
+#page3_text_part2 h2 {
+    margin-top: 2vmax;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5vmax;
+    font-weight: 100;
+    letter-spacing: 0.05vmax;
+    color: #FF5E00;
+}
+#page3_text_part2 p {
+   margin-top: 3vh;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #57606F;
+    font-size: 1.1vmax;
+}
+
+/* Page 4 css */
+#page4 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+#page4_color_image1 {
+    width: 20vw;
+    margin: 0vh 0 0 20vh;
+}
+#page4_color_image1_text {
+    width: 13vw;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    color: #fff;
+    text-align: center;
+}
+#page4_color_image1_text h4 {
+    width: 8vw;
+    margin-bottom: 1vh;
+    margin-left: 3vmax;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #fff;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+    text-transform: uppercase;
+}
+
+#page4_color_image2 {
+    width: 21vw;
+    margin: 26vh 0 0 -6vh;
+}
+
+#page4_color_image2_text {
+    width: 13vw;
+    position: absolute;
+    top: 32%;
+    left: 33%;
+    color: #fff;
+    text-align: center;
+}
+#page4_color_image2_text h4 {
+    width: 8vw;
+    margin-left: 3vmax;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #fff;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#page4_color_image3 {
+    width: 25vw;
+    margin: 20vh 0 0 40vh;
+}
+#page4_color_image3_text {
+    width: 15vw;
+    position: absolute;
+    top: 30%;
+    left: 74%;
+    color: #fff;
+    text-align: center;
+}
+#page4_color_image3_text h4 {
+    width: 8vw;
+    margin-bottom: 1vh;
+    margin-left: 3.5vmax;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    border-bottom: 0.2vmax solid #fff;
+    font-weight: 100;
+    letter-spacing: 0.1vmax;
+}
+
+#page4_color_image4 {
+    width: 50vh;
+    height: 50vh;
+    margin: 45vh 0 0 -188vh;
+    transform: rotate(-17deg);
+}
+
+/* Page 5 css */
+#page5 {
+    width: 100vw;
+    height: 110vh;
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#page5 h5 {
+    font-size: 3.5vmax;
+    font-family: 'Dancing Script', cursive;
+    color: #00A0E9;
+    margin-top: 3vh;
+}
+#page5 h1 {
+    width: 30vw;
+    text-transform: uppercase;
+    font-family: 'Anton',sans-serif;
+    font-weight: 600;
+    font-size: 6.5vw;
+    background: url(img/texture.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #FF5E00;
+    text-align: center;
+}
+
+#page5_image_box {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 3vw 0 5vw;
+    display: flex;
+    align-items: center;
+transform: translateX(-70px);
+    justify-content: space-evenly;
+}
+#page5_flask {
+    width: 60vw;
+    height: 60vh;
+    justify-content: center;
+}
+#page5_flask h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+font-size: 1.5vw;
+    font-family: 'Dosis', sans-serif;
+transform: translateX(50px);
+    color: #2F3542;
+    font-weight: 600;
+    margin-left: -120px;
+    margin-top: 10px;
+}
+
+/* Base styling for all images in the container */
+#page5_flask img {
+    transform: translateX(-45px);
+    transform: translateY(-45px);
+    width: 280px;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;   
+}
+
+#image11 {
+}
+
+#image22 {
+    transform: rotate(-15deg);
+}
+
+#image33 {
+    opacity: 0;
+    transform: rotate(-15deg);
+}
+
+#image44 {
+    transform: rotate(-15deg);
+}
+
+#image55 {
+    transform: rotate(-15deg);
+}
+#page5_flask h6 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.1vmax;
+    color: #A4B0BE;
+    margin-top: 5px;
+}
+
+
+/* --- NEW 3D FLIP STYLING --- */
+
+.flask-card {
+    cursor: pointer;
+    perspective: 1000px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.flip-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 0 auto; 
+}
+
+/* Flips the wrapper 180deg horizontally when clicked */
+.flask-card.flipped .flip-wrapper {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Initially flips the back images so they face the correct way when revealed */
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Match the exact rotations from the original images so the toys align perfectly */
+#toy22 { transform: rotate(-15deg); }
+#toy33 { opacity: 0; transform: rotate(-15deg); }
+#toy44 { transform: rotate(-15deg); }
+#toy55 { transform: rotate(-15deg); }
+
+
+
+/* Page 6 */
+#page6 {
+    width: 100vw;
+    height: 90vh;
+    padding: 0 0vw 0 9vw;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#page6 img {
+    width: 50vw;
+    height: 62vh;
+    border-radius: 12px;
+}
+
+#page6_part2 {
+    padding: 0 4vw 0 4vw;
+    width: 40vw;
+    height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#page6_part2 h5 {
+    font-size: 2vmax;
+    font-family: 'Dancing Script', cursive;
+    color: #FF5E00;
+}
+
+#page6_part2 h1 {
+   margin-top: 2vh;
+   width: 30vw;
+   font-family: 'Anton', sans-serif;
+   font-size: 4vw;
+   font-weight: 100;
+   line-height: 9.5vh;
+   letter-spacing: 0.5vw;
+   text-transform: uppercase;
+   color: #00A0E9;
+}
+#page6_part2 p {
+    margin-top: 3vh;
+    font-weight: 600;
+    font-family: 'Dosis', sans-serif;
+    color: #57606F;
+    font-size: 1.2vmax;
+    line-height: 1.8vmax;
+}
+#page6_part2>button {
+    margin-top: 3vh;
+    font-size: 1.2vmax;
+    padding: 0.8vmax 1.5vmax;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #fff;
+    background-color: #00A0E9; /* Kinder Light Blue */
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    letter-spacing: 1px;
+}
